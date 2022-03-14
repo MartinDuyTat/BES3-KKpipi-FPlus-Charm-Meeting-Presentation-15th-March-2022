@@ -47,7 +47,7 @@
 \newcommand{\myrbrace}[2]{\vspace{#2pt}\scaleleftright[\dimexpr5pt+#1\dimexpr0.06pt]{.}{\rule[\dimexpr2pt-#1\dimexpr0.5pt]{-4pt}{#1pt}}{\rbrace}\hspace{6pt}}
 
 % Here's where the presentation starts, with the info for the title slide
-\title[University of Oxford]{BESIII Charm Meeting \\Measurement of CP even fraction $F_+$ in $D^0\to K^+K^-\pi^+\pi^-$}
+\title[University of Oxford]{BESIII Charm Meeting \\Measurement of the CP even fraction $F_+$ in $D^0\to K^+K^-\pi^+\pi^-$}
 %\author{\textbf{Martin Tat} \hspace{0.54em} Guy Wilkinson \hspace{0.54em} Sneha Malde}
 \author{Martin Tat}
 \institute{University of Oxford}
@@ -147,14 +147,14 @@
   \end{block}
 \end{frame}
 
-\section{Selection and tag modes}
+\section{Selection}
 \begin{frame}{Selection}
   \begin{itemize}
     \item{Selection of charged and neutral particles follow standard track and shower requirements}
     \item{Require flight significance $> 2$ for $K_S$}
     \item{$K_S$ veto for $KK\pi\pi$ and $\pi\pi\pi^0$ tags}
     \item{$\Delta E$ cut of $3\sigma$}
-    \item{$\Delta E$ fit for 4-body modes allow a non-smooth background at $\Delta E = 0$}
+    \item{$\Delta E$ fit for 4-body modes allows a non-smooth background at $\Delta E = 0$}
   \end{itemize}
   \begin{figure}
     \centering
@@ -170,91 +170,7 @@
   \end{figure}
 \end{frame}
 
-\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
-\begin{frame}{Tag modes}
-  \begin{itemize}
-    \setlength\itemsep{1.0em}
-    \item{Flavour tags:}
-    \begin{itemize}
-      \item{$K\pi$, $K\pi\pi^0$, $K\pi\pi\pi$, \underline{$Ke\nu$}}
-    \end{itemize}
-    \item{CP even tags:}
-    \begin{itemize}
-      \item{$KK$, $\pi\pi$, $\pi\pi\pi^0$\footnote{Mostly CP even}, $K_S\pi^0\pi^0$, $K_L\pi^0$, \underline{$K_L\omega$}}
-    \end{itemize}
-    \item{CP odd tags:}
-    \begin{itemize}
-      \item{$K_S\pi^0$, $K_S\eta$, $K_S\omega$, $K_S\eta^\prime_{\pi\pi\eta}$, $K_S\eta^\prime_{\rho\gamma}$, \underline{$K_L\pi^0\pi^0$}}
-    \end{itemize}
-    \item{Self-conjugate tags:}
-    \begin{itemize}
-      \item{$K_S\pi\pi$, $K_L\pi\pi$}
-    \end{itemize}
-  \end{itemize}
-  Underlined tags have not been finalized yet
-\end{frame}
-
-\section{Determination of single and double tag yields}
-\begin{frame}{Single tag fits}
-  \begin{itemize}
-    \item{Fit model:}
-    \begin{itemize}
-      \item{Signal: PDF from signal MC, convoluted with double Gaussian}
-      \item{Combinatorial background: Argus PDF}
-    \end{itemize}
-  \end{itemize}
-  \begin{figure}
-    \centering
-    \includegraphics[width=0.65\textwidth]{Plots/KKpipi_SingleTag_MBC_Plot.png}
-    \caption{$KK\pi\pi$ single tag fit}
-  \end{figure}
-\end{frame}
-
-\begin{frame}{Peaking backgrounds}
-  \begin{itemize}
-    \item{Strategy for fixing peaking backgrounds:}
-    \begin{enumerate}
-      \item{Generate dedicated MC sample}
-      \item{Obtain retention rate of peaking background}
-      \item{Fit background with appropriate shape (Gaussian, Crystal Ball, ...)}
-      \item{Use BFs from PDG to fix background-to-signal ratio}
-    \end{enumerate}
-  \end{itemize}
-  \begin{figure}
-    \centering
-    \includegraphics[width=0.50\textwidth]{Plots/KSKKtoKKpipi_Fit.png}
-    \caption{$K_SKK$ background in $KK\pi\pi$ single tag fit, fitted with Double Gaussian}
-  \end{figure}
-\end{frame}
-
-\begin{frame}{Quantum correlation in peaking backgrounds}
-  \begin{itemize}
-    \item{Strategy for peaking backgrounds with different CP:}
-    \begin{itemize}
-      \item{Correct using $F_+^{KK\pi\pi}$ from LHCb model}
-    \end{itemize}
-    \item{Strategy for $K_SKK$ background in $KK\pi\pi$}
-    \begin{itemize}
-      \item{$F_+^{K_SKK} = \SI{0.524(18)}{}$ from \href{https://arxiv.org/abs/2007.07959}{Phys. Rev. D \textbf{102}, 052008}}
-      \item{Use dedicated MC to find retention in each $K_SKK$ bin}
-      \item{$K_S$ veto removes more $K_S\phi$ than $K_Sa(980)^0$ $\implies$ Calculate effective $F_+$ for $K_SKK$ to $KK\pi\pi$ background}
-    \end{itemize}
-  \end{itemize}
-  \begin{figure}
-    \centering
-    \begin{subfigure}{0.5\textwidth}
-      \centering
-      \includegraphics[width=0.95\textwidth]{Plots/KSKK_to_KKpipi_vs_KK_DoubleTag_FitPlot.png}
-      \caption{$F_+^{K_SKK} = \SI{0.726(30)}{}$}
-    \end{subfigure}%
-    \begin{subfigure}{0.5\textwidth}
-      \centering
-      \includegraphics[width=0.95\textwidth]{Plots/KSKK_to_KKpipi_vs_KSpi0_DoubleTag_FitPlot.png}
-      \caption{$F_+^{K_SKK} = \SI{0.840(34)}{}$}
-    \end{subfigure}
-  \end{figure}
-\end{frame}
-
+\section{Fit of double tag yields}
 \begin{frame}{Double tag fits}
   \begin{itemize}
     \item{Fit strategy: Only fit signal side $m_{\rm BC}$ because of low statistics}
@@ -326,7 +242,6 @@
     \item{Fit all CP tags simultaneously with $\text{BF}(KK\pi\pi)$ and $F_+^{KK\pi\pi}$ floated}
   \end{itemize}
   \centering
-  %\def\arraystretch{1.2}%
   \small
   \begin{tabular}{l|c|c}
     Mode                          & Single tag yield & Double tag yield \\
@@ -473,6 +388,90 @@
   \begin{center}
     {\huge Backup}
   \end{center}
+\end{frame}
+
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+\begin{frame}{Tag modes}
+  \begin{itemize}
+    \setlength\itemsep{1.0em}
+    \item{Flavour tags:}
+    \begin{itemize}
+      \item{$K\pi$, $K\pi\pi^0$, $K\pi\pi\pi$, \underline{$Ke\nu$}}
+    \end{itemize}
+    \item{CP even tags:}
+    \begin{itemize}
+      \item{$KK$, $\pi\pi$, $\pi\pi\pi^0$\footnote{Mostly CP even}, $K_S\pi^0\pi^0$, $K_L\pi^0$, \underline{$K_L\omega$}}
+    \end{itemize}
+    \item{CP odd tags:}
+    \begin{itemize}
+      \item{$K_S\pi^0$, $K_S\eta$, $K_S\omega$, $K_S\eta^\prime_{\pi\pi\eta}$, $K_S\eta^\prime_{\rho\gamma}$, \underline{$K_L\pi^0\pi^0$}}
+    \end{itemize}
+    \item{Self-conjugate tags:}
+    \begin{itemize}
+      \item{$K_S\pi\pi$, $K_L\pi\pi$}
+    \end{itemize}
+  \end{itemize}
+  Underlined tags have not been finalized yet
+\end{frame}
+
+\begin{frame}{Single tag fits}
+  \begin{itemize}
+    \item{Fit model:}
+    \begin{itemize}
+      \item{Signal: PDF from signal MC, convoluted with double Gaussian}
+      \item{Combinatorial background: Argus PDF}
+    \end{itemize}
+  \end{itemize}
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.65\textwidth]{Plots/KKpipi_SingleTag_MBC_Plot.png}
+    \caption{$KK\pi\pi$ single tag fit}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Peaking backgrounds}
+  \begin{itemize}
+    \item{Strategy for fixing peaking backgrounds:}
+    \begin{enumerate}
+      \item{Generate dedicated MC sample}
+      \item{Obtain retention rate of peaking background}
+      \item{Fit background with appropriate shape (Gaussian, Crystal Ball, ...)}
+      \item{Use BFs from PDG to fix background-to-signal ratio}
+    \end{enumerate}
+  \end{itemize}
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.50\textwidth]{Plots/KSKKtoKKpipi_Fit.png}
+    \caption{Double Gaussian fit of $K_SKK$ background in $KK\pi\pi$ single tag fit}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Quantum correlation in peaking backgrounds}
+  \begin{itemize}
+    \item{Strategy for peaking backgrounds with different CP:}
+    \begin{itemize}
+      \item{Correct using $F_+^{KK\pi\pi}$ from LHCb model}
+    \end{itemize}
+    \item{Strategy for $K_SKK$ background in $KK\pi\pi$}
+    \begin{itemize}
+      \item{$F_+^{K_SKK} = \SI{0.524(18)}{}$ from \href{https://arxiv.org/abs/2007.07959}{Phys. Rev. D \textbf{102}, 052008}}
+      \item{Use dedicated MC to find retention in each $K_SKK$ bin}
+      \item{$K_S$ veto removes more $K_S\phi$ than $K_Sa(980)^0$ $\implies$ Calculate effective $F_+$ for $K_SKK$ to $KK\pi\pi$ background}
+    \end{itemize}
+  \end{itemize}
+  \begin{figure}
+    \centering
+    \begin{subfigure}{0.5\textwidth}
+      \centering
+      \includegraphics[width=0.95\textwidth]{Plots/KSKK_to_KKpipi_vs_KK_DoubleTag_FitPlot.png}
+      \caption{$F_+^{K_SKK} = \SI{0.726(30)}{}$}
+    \end{subfigure}%
+    \begin{subfigure}{0.5\textwidth}
+      \centering
+      \includegraphics[width=0.95\textwidth]{Plots/KSKK_to_KKpipi_vs_KSpi0_DoubleTag_FitPlot.png}
+      \caption{$F_+^{K_SKK} = \SI{0.840(34)}{}$}
+    \end{subfigure}
+  \end{figure}
 \end{frame}
 
 \begin{frame}{$K_S\omega$ CP even tag using sPlot}
